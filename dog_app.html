@@ -14442,7 +14442,7 @@ test_{network} = bottleneck_features['test']</code></pre>
 
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> First step was adding final fully-connected layer with output shape of 133 (number of classes). Then I added as from VGG-16 example the GAP layer in the beginning. Running such configuration with 20 epochs resulted in 83% accuracy. I think the results are good enough because the Xception model was trained well enough to recognize dogs (because its training data also included dogs). So Xception's data was very similar to our data and I only needed to retrain the last layer to achieve good results.</p>
 
 </div>
 </div>
